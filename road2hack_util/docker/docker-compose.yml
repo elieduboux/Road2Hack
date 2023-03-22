@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+ debian:
+    build:
+      context: .      
+    ports:
+      - "22:22"
+      

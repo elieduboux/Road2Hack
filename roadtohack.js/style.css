@@ -1,0 +1,15 @@
+html,
+body,
+title {
+    text-align: center;
+    top: 10px;
+}
+
+.buttons {
+    /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}

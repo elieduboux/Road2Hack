@@ -1,0 +1,141 @@
+
+
+html, body, .container {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+img.animated-gif{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+img.logo{
+  position: absolute;
+  z-index: 2;
+  top : 2%;
+  right : 40%;
+  width: 24%;
+  height: 12%;
+  transform: skew(-5deg);
+}
+
+#btnStart, #btnStart::after {
+    position: absolute;
+    z-index: 2;
+    bottom : 50%;
+    right : 9%;
+    width: 34%;
+    height: 23%;
+    transform: skew(-5deg);
+    background: transparent;
+    font-size: 70px;
+    border: 0;
+    color: rgb(255, 0, 242);
+  }
+
+  #btnCoffee {
+    position: absolute;
+    z-index: 2;
+    bottom : 3%;
+    right : 65%;
+    width: 11%;
+    height: 24%;
+    border-radius: 1em 1em 1em 1em;
+    transform: skew(-5deg);
+    background: transparent;
+    border: 0;
+    color: rgb(255, 0, 242);
+  }
+
+  #btnSus {
+    position: absolute;
+    z-index: 2;
+    bottom : 32.3%;
+    left : 17.2%;
+    width: 1.5%;
+    height: 2.3%;
+    transform: skew(-5deg);
+    background: transparent;
+    border: 0;
+  }
+
+  #btnConf {
+    position: absolute;
+    z-index: 2;
+    top : 0%;
+    left : 0%;
+    width: 14%;
+    height: 35%;
+    background: transparent;
+    border: 0;
+  }
+  
+  #btnStart::after {
+    --slice-0: inset(80% -30% 5% 100%);
+    --slice-1: inset(100% -10% 0 0);
+    --slice-2: inset(50% -10% 30% 0);
+
+    content: 'R2H';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: var(--slice-0);
+  }
+  
+  button:hover::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+  }
+  
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-0);
+      transform: translate(-5%, -5%);
+    }
+    10% {
+      clip-path: var(--slice-2);
+      transform: translate(80%, 80%);
+    }
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(5%, 5%);
+    }
+    30% {
+      clip-path: var(--slice-2);
+      transform: translate(5%, 5%);
+    }
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(5%, 0px);
+    }
+    50% {
+      clip-path: var(--slice-1);
+      transform: translate(5%,5%);
+    }
+    60% {
+      clip-path: var(--slice-0);
+      transform: translate(5%, 5%);
+    }
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(5%, 5%);
+    }
+    80% {
+      clip-path: var(--slice-0);
+      transform: translate(5%,5%);
+    }
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 80px);
+    }
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+  }
